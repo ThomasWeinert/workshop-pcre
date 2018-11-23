@@ -188,18 +188,7 @@
           <section>
             <h3>Task: Match anything but newlines</h3>
             <p>Match the string <code>cc.cc.cc.cc</code>. "c" can by any character except a newline.</p>
-            <pre><code class="language-php">$pattern = '()';
-
-$result = \preg_match_all(
-  $pattern,
-  "ab.cd.ef.gh\na\n.b\n.d\n.e\n\nabcdefghiklm",
-  $matches
-);
-if ($result && \count($matches[0]) === 1) {
-  echo 'SUCCESS';
-} else {
-  echo 'FAIL';
-}</code></pre>
+            <pre><code data-sample="./tasks/MatchAnythingButNewline.php#11-20" class="language-php"></code></pre>
             <aside class="notes">
               <ul>
                 <li><code>$pattern = '(..\\...\\...\\...)';</code></li>
@@ -251,19 +240,7 @@ if ($result && \count($matches[0]) === 1) {
             <h3>Task: Validate string start</h3>
             <p>The <strong>^</strong> anchors the pattern to the string start.</p>
             <p>Validate that the string starts with a digit.</p>
-            <pre><code class="language-php">$pattern = '()';
-
-$subjects = [
-  '1. match' => TRUE, '2. match' => TRUE, '42' => TRUE,
-  'no match' => FALSE, "a 345 b" => FALSE, "end 3" => FALSE
-];
-foreach ($subjects as $subject => $shouldMatch) {
-  if ($shouldMatch === (bool)\preg_match($pattern, $subject)) {
-    echo "SUCCESS\n";
-  } else {
-    echo "FAIL\n";
-  }
-}</code></pre>
+            <pre><code data-sample="./tasks/ValidateStringStart.php#20-24" class="language-php"></code></pre>
             <aside class="notes">
               <ul>
                 <li><code>$pattern = '(^\\d)';</code></li>
