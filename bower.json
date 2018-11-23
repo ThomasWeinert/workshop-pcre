@@ -20,6 +20,7 @@
     "reveal.js-menu": "^0.7.1",
     "reveal-print": "^0.1",
     "reveal-badges": "^1.2",
-    "reveal-presenter-keys": "^0.1.0"
+    "reveal-presenter-keys": "^0.1.0",
+    "reveal-sampler": "https://github.com/ldionne/reveal-sampler.git"
   }
 }

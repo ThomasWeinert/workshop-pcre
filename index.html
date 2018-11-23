@@ -144,16 +144,7 @@
           <section>
             <h3>Task: Match a string</h3>
             <p>Match the string &quot;<em>nevercodealone</em>&quot;. This is case sensitive.</p>
-            <pre><code class="language-php">$pattern = '';
-
-$result = \preg_match_all(
-  $pattern, 'https://nevercodealone.de', $matches
-);
-if ($result && \count($matches[0]) === 1) {
-  echo 'SUCCESS';
-} else {
-  echo 'FAIL';
-}</code></pre>
+            <pre><code data-sample="./tasks/MatchAString.php#10-17" class="language-php"></code></pre>
           </section>
           <section>
             <h2>Try different delimiters</h2>
@@ -182,16 +173,7 @@ if ($result && \count($matches[0]) === 1) {
             <h3>Task: Match a string case&nbsp;insensitive</h3>
             <p>The modifier <strong>i</strong> allows case insensitive matches</p>
             <p>Match the string &quot;<em>code</em>&quot;. This is case insensitive.</p>
-            <pre><code class="language-php">$pattern = '';
-
-$result = \preg_match_all(
-  $pattern, 'code CODE Code', $matches
-);
-if ($result && \count($matches[0]) === 3) {
-  echo 'SUCCESS';
-} else {
-  echo 'FAIL';
-}</code></pre>
+            <pre><code data-sample="./tasks/MatchAStringCaseInsensitive.php#10-16" class="language-php"></code></pre>
           </section>
         </section>
         <section>
@@ -813,6 +795,7 @@ $)Dx';</code></pre>
           { src: 'bower_components/reveal-badges/src/badges.js' },
           { src: 'bower_components/reveal-presenter-keys/src/presenter-keys.js' },
           { src: 'bower_components/reveal-print/src/print.js' },
+          { src: 'bower_components/reveal-sampler/sampler.js' },
 
           { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
@@ -838,6 +821,11 @@ $)Dx';</code></pre>
 
         presenter: {
           profile: 'Lenovo Yoga Mouse'
+        },
+
+        sampler: {
+          wrapper: 'task.php?file=',
+          unindent: true
         }
 
       });
