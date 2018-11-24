@@ -3,9 +3,8 @@
 class ValidateStringStart extends \PHPUnit\Framework\TestCase {
 
   /**
-   * Validate that the subject starts with a digit.
-   *
    * @test
+   * @testdox Validate if "$subject" starts with a digit, expecting "$shouldMatch".
    * @testWith
    *   ["1. match", true]
    *   ["2. match", true]
@@ -21,6 +20,10 @@ class ValidateStringStart extends \PHPUnit\Framework\TestCase {
 
     /* DO NOT CHANGE */
     $result = (bool)\preg_match($pattern, $subject);
-    $this->assertSame($shouldMatch, $result);
+    if ($shouldMatch) {
+      $this->assertTrue($result);
+    } else {
+      $this->assertFalse($result);
+    }
   }
 }

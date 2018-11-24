@@ -3,9 +3,9 @@
 class MatchAnythingButNewline extends \PHPUnit\Framework\TestCase {
 
   /**
-   * Match a string in the pattern "cc.cc.cc.cc"
-   * (four groups of two characters separated by dots).
    * @test
+   * @testdox Match a string in the pattern "cc.cc.cc.cc"
+   *   (four groups of two characters separated by dots).
    */
   public function MatchFourGroupsOfTwoCharacters() {
     $pattern = '()';

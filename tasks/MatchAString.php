@@ -3,8 +3,8 @@
 class MatchAString extends \PHPUnit\Framework\TestCase {
 
   /**
-   * Match the string "nevercodealone".
    * @test
+   * @testdox Match the string "nevercodealone".
    */
   public function MatchTheString() {
     $pattern = '()';

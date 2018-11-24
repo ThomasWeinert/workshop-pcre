@@ -3,8 +3,8 @@
 class MatchAStringCaseInsensitive extends \PHPUnit\Framework\TestCase {
 
   /**
-   * Match the string "code" case insensitive.
    * @test
+   * @testdox Match the string "code" case insensitive.
    */
   public function MatchCodeCaseInsensitive() {
     $pattern = '()';
