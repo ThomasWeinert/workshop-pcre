@@ -19,13 +19,13 @@
     "**/.*",
     "example/"
   ],
-  "_release": "b04a34e9fc",
+  "_release": "62bfb3b0b7",
   "_resolution": {
     "type": "branch",
-    "branch": "master",
-    "commit": "b04a34e9fcc71603dbc26ffc61f4ee3ef21dec8b"
+    "branch": "feature/fetcher-url",
+    "commit": "62bfb3b0b7301ba66729fd0318529812439b8a79"
   },
-  "_source": "https://github.com/ldionne/reveal-sampler.git",
-  "_target": "*",
-  "_originalSource": "https://github.com/ldionne/reveal-sampler.git"
+  "_source": "https://github.com/ThomasWeinert/reveal-sampler.git",
+  "_target": "feature/fetcher-url",
+  "_originalSource": "https://github.com/ThomasWeinert/reveal-sampler.git"
 }

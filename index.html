@@ -209,16 +209,7 @@
             <p>The qualifier <strong>\D</strong> matches anything except a digit.</p>
             <p>Match the a string with the structure <code>xxXxxXxxxx</code>. "x" represents a
               digit, "X" a non digit.</p>
-            <pre><code class="language-php">$pattern = '()';
-
-$result = \preg_match_all(
-  $pattern, "12.34.5678\n123456789\nab.cd.efgh", $matches
-);
-if ($result && \count($matches[0]) === 1) {
-  echo 'SUCCESS';
-} else {
-  echo 'FAIL';
-}</code></pre>
+            <pre><code data-sample="./tasks/MatchDigitsAndNonDigits.php#10-18" class="language-php"></code></pre>
             <aside class="notes">
               <ul>
                 <li><code>$pattern = '(\\d\\d\\D\\d\\d\\D\\d\\d\\d\\d)';</code></li>
@@ -240,7 +231,7 @@ if ($result && \count($matches[0]) === 1) {
             <h3>Task: Validate string start</h3>
             <p>The <strong>^</strong> anchors the pattern to the string start.</p>
             <p>Validate that the string starts with a digit.</p>
-            <pre><code data-sample="./tasks/ValidateStringStart.php#20-24" class="language-php"></code></pre>
+            <pre><code data-sample="./tasks/ValidateStringStart.php#19-27" class="language-php"></code></pre>
             <aside class="notes">
               <ul>
                 <li><code>$pattern = '(^\\d)';</code></li>
@@ -252,20 +243,7 @@ if ($result && \count($matches[0]) === 1) {
             <h3>Task: Validate string end</h3>
             <p>The <strong>$</strong> anchors the pattern to the string end.</p>
             <p>Validate that the string ends with a digit.</p>
-            <pre><code class="language-php">$pattern = '()';
-
-$subjects = [
-  'match 1' => TRUE, 'match 2' => TRUE,
-  '42' => TRUE, "21\n" => TRUE,
-  'no match' => FALSE, "a 345 b" => FALSE, "3 start" => FALSE
-];
-foreach ($subjects as $subject => $shouldMatch) {
-  if ($shouldMatch === (bool)\preg_match($pattern, $subject)) {
-    echo "SUCCESS\n";
-  } else {
-    echo "FAIL\n";
-  }
-}</code></pre>
+            <pre><code data-sample="./tasks/ValidateStringEnd.php#20-28" class="language-php"></code></pre>
             <aside class="notes">
               <ul>
                 <li><code>$pattern = '(\\d$)';</code></li>
@@ -801,8 +779,8 @@ $)Dx';</code></pre>
         },
 
         sampler: {
-          wrapper: 'task.php?file=',
-          unindent: true
+          fetcherURL: 'task.php?file=',
+          removeIndentation: true
         }
 
       });
