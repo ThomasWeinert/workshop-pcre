@@ -231,7 +231,7 @@
             <h3>Task: Validate string start</h3>
             <p>The <strong>^</strong> anchors the pattern to the string start.</p>
             <p>Validate that the string starts with a digit.</p>
-            <pre><code data-sample="./tasks/ValidateStringStart.php#19-27" class="language-php"></code></pre>
+            <pre><code data-sample="./tasks/ValidateStringStart.php#5,11-17,19" class="language-php"></code></pre>
             <aside class="notes">
               <ul>
                 <li><code>$pattern = '(^\\d)';</code></li>
@@ -243,7 +243,7 @@
             <h3>Task: Validate string end</h3>
             <p>The <strong>$</strong> anchors the pattern to the string end.</p>
             <p>Validate that the string ends with a digit.</p>
-            <pre><code data-sample="./tasks/ValidateStringEnd.php#20-28" class="language-php"></code></pre>
+            <pre><code data-sample="./tasks/ValidateStringEnd.php#5,11-18,20" class="language-php"></code></pre>
             <aside class="notes">
               <ul>
                 <li><code>$pattern = '(\\d$)';</code></li>
@@ -255,19 +255,7 @@
             <h3>Task: Validate a German zip code</h3>
             <p>The modifier <strong>D</strong> makes sure that a linefeed at the end of the subject is not ignored.
               Validate that the subject is a German zip code. It consists of 5 digits.</p>
-            <pre><code class="language-php">$pattern = '()';
-
-$subjects = [
-  '01234' => TRUE, '50670' => TRUE, '40213' => TRUE,
-  'abcdef' => FALSE, "50670\n" => FALSE, "123456" => FALSE
-];
-foreach ($subjects as $subject => $shouldMatch) {
-  if ($shouldMatch === (bool)\preg_match($pattern, $subject)) {
-    echo "SUCCESS\n";
-  } else {
-    echo "FAIL\n";
-  }
-}</code></pre>
+            <pre><code data-sample="./tasks/ValidateAGermanZipCode.php#5,12-18,20" class="language-php"></code></pre>
             <aside class="notes"><code>$pattern = '(^\d\d\d\d\d$)D';</code></aside>
           </section>
           <section>
@@ -295,16 +283,7 @@ foreach ($subjects as $subject => $shouldMatch) {
           <section>
             <h3>Task: Match vowels</h3>
             <p>Match all the vowels (aeiou) in the string.</p>
-            <pre><code class="language-php">$pattern = '()';
-
-$result = \preg_match_all(
-  $pattern, 'https://nevercodealone.de', $matches
-);
-if ($result && \count($matches[0]) === 8) {
-  echo 'SUCCESS';
-} else {
-  echo 'FAIL';
-}</code></pre>
+            <pre><code data-sample="./tasks/MatchVowels.php#10-17" class="language-php"></code></pre>
             <aside class="notes">
               <ul>
                 <li><code>$pattern = '([aeiou])';</code></li>
@@ -314,16 +293,7 @@ if ($result && \count($matches[0]) === 8) {
           <section>
             <h3>Task: Match non-vowels</h3>
             <p>Match all the non-vowels in the string.</p>
-            <pre><code class="language-php">$pattern = '()';
-
-$result = \preg_match_all(
-  $pattern, 'https://nevercodealone.de', $matches
-);
-if ($result && \count($matches[0]) === 17) {
-  echo 'SUCCESS';
-} else {
-  echo 'FAIL';
-}</code></pre>
+            <pre><code data-sample="./tasks/MatchNonVowels.php#10-17" class="language-php"></code></pre>
             <aside class="notes">
               <ul>
                 <li><code>$pattern = '([^aeiou])';</code></li>
@@ -334,19 +304,7 @@ if ($result && \count($matches[0]) === 17) {
             <h3>Task: Validate hexadecimal bytes</h3>
             <p>Validate that the string consists of two characters. The
             characters can be digits or a letter between a and f.</p>
-            <pre><code class="language-php">$pattern = '()';
-
-$subjects = [
-  '01' => TRUE, '0f' => TRUE, 'FA' => TRUE,
-  'az' => FALSE, "foo" => FALSE, "123" => FALSE
-];
-foreach ($subjects as $subject => $shouldMatch) {
-  if ($shouldMatch === (bool)\preg_match($pattern, $subject)) {
-    echo "SUCCESS\n";
-  } else {
-    echo "FAIL\n";
-  }
-}</code></pre>
+            <pre><code data-sample="./tasks/ValidateHexadecimalBytes.php#5,12-18,20" class="language-php"></code></pre>
             <aside class="notes">
               <ul>
                 <li><code>$pattern = '(^[a-fA-F0-9][a-fA-F0-9]$)';</code></li>
@@ -375,39 +333,14 @@ foreach ($subjects as $subject => $shouldMatch) {
             <h3>Task: Validate a German zip code</h3>
             <p>The <code>{n}</code> syntax allows you to match a fixed repeat of qualifiers.
               Validate that the subject is a German zip code. It consists of 5 digits.</p>
-            <pre><code class="language-php">$pattern = '()';
-
-$subjects = [
-  '01234' => TRUE, '50670' => TRUE, '40213' => TRUE,
-  'abcdef' => FALSE, "50670\n" => FALSE, "123456" => FALSE
-];
-foreach ($subjects as $subject => $shouldMatch) {
-  if ($shouldMatch === (bool)\preg_match($pattern, $subject)) {
-    echo "SUCCESS\n";
-  } else {
-    echo "FAIL\n";
-  }
-}</code></pre>
-            <aside class="notes"><code>$pattern = '(^\d{5}$)D';</code></aside>
+            <pre><code data-sample="./tasks/ValidateAGermanZipCode.php#5,12-18,20" class="language-php"></code></pre>
+            <aside class="notes"><code>$pattern = '(^\\d{5}$)D';</code></aside>
           </section>
           <section>
             <h3>Task: Validate a language code</h3>
             <p>The <code>{n,m}</code> syntax allows you minimum and a maximum repetitions.
               Validate that the subject is an 2 or 3 letter language code.</p>
-            <pre><code class="language-php">$pattern = '()';
-
-$subjects = [
-  'en' => TRUE, 'de' => TRUE,
-  'eng' => TRUE, 'deu' => TRUE,
-  '123' => FALSE, "en-US" => FALSE
-];
-foreach ($subjects as $subject => $shouldMatch) {
-  if ($shouldMatch === (bool)\preg_match($pattern, $subject)) {
-    echo "SUCCESS\n";
-  } else {
-    echo "FAIL\n";
-  }
-}</code></pre>
+            <pre><code data-sample="./tasks/ValidateALanguageCode.php#5,12-19,21" class="language-php"></code></pre>
             <aside class="notes">
               <ul>
                 <li><code>$pattern = '(^[a-z]{2,3}$)';</code></li>
@@ -418,20 +351,7 @@ foreach ($subjects as $subject => $shouldMatch) {
             <h3>Task: Validate an integer</h3>
             <p><code>?</code> matches one or none. <code>+</code> matches at least one repetition.
             Validate an integer including an optional leading sign</p>
-            <pre><code class="language-php">$pattern = '()';
-
-$subjects = [
-  '1' => TRUE, '123' => TRUE,
-  '+123' => TRUE, '-456' => TRUE,
-  '1.1' => FALSE, "abc" => FALSE, "123 456" => FALSE
-];
-foreach ($subjects as $subject => $shouldMatch) {
-  if ($shouldMatch === (bool)\preg_match($pattern, $subject)) {
-    echo "SUCCESS\n";
-  } else {
-    echo "FAIL\n";
-  }
-}</code></pre>
+            <pre><code data-sample="./tasks/ValidateAnInteger.php#5,12-19,21" class="language-php"></code></pre>
             <aside class="notes">
               <ul>
                 <li><code>$pattern = '(^[+-]?\d+$)';</code></li>
@@ -462,16 +382,7 @@ foreach ($subjects as $subject => $shouldMatch) {
             <h3>Task: Match unicode letters</h3>
             <p>Use the unicode property <code>L</code> to match any letter in the string
               <code>"English, Русский, 中文"</code>.</p>
-            <pre><code class="language-php">$pattern = '()u';
-
-$result = \preg_match_all(
-  $pattern, 'English, Русский, 中文', $matches
-);
-if ($result && \count($matches[0]) === 16) {
-  echo 'SUCCESS';
-} else {
-  echo 'FAIL';
-}</code></pre>
+            <pre><code data-sample="./tasks/MatchUnicodeLetters.php#10-17" class="language-php"></code></pre>
             <aside class="notes">
               <ul>
                 <li><code>$pattern = '(\p{L})u';</code></li>
@@ -481,17 +392,8 @@ if ($result && \count($matches[0]) === 16) {
           </section>
           <section>
             <h3>Task: Match Cyrillic letters</h3>
-            <p>Match any cyrillic letter in the subject.</p>
-            <pre><code class="language-php">$pattern = '()u';
-
-$result = \preg_match_all(
-  $pattern, 'English, Русский, 中文', $matches
-);
-if ($result && \count($matches[0]) === 7) {
-  echo 'SUCCESS';
-} else {
-  echo 'FAIL';
-}</code></pre>
+            <p>Match any Cyrillic letter in the subject.</p>
+            <pre><code data-sample="./tasks/MatchCyrillicLetters.php#10-17" class="language-php"></code></pre>
             <aside class="notes">
               <ul>
                 <li><code>$pattern = '(\p{Cyrillic})u';</code></li>
@@ -511,21 +413,9 @@ if ($result && \count($matches[0]) === 7) {
             </ul>
           </section>
           <section>
-            <h3>Task: Match a date</h3>
+            <h3>Task: Match date parts</h3>
             <p>Match a date in the format "YYYY-MM-DD". Capture each part into a named group (year, month, day).</p>
-            <pre><code class="language-php">$pattern = '()u';
-
-if (
-  \preg_match($pattern, '2017-02-27', $match) &&
-  isset($match['year'], $match['month'], $match['day']) &&
-  $match['year'] === '2017' &&
-  $match['month'] === '02' &&
-  $match['day'] === '27'
-) {
-  echo "SUCCESS\n";
-} else {
-  echo "FAIL\n";
-}</code></pre>
+            <pre><code data-sample="./tasks/MatchDateParts.php#10-17" class="language-php"></code></pre>
           </section>
           <aside class="notes">
             <ul>
@@ -535,20 +425,7 @@ if (
           <section>
             <h3>Task: Check for consecutive ughs</h3>
             <p>Check if the the string contains 3 consecutive "ugh"s.</p>
-            <pre><code class="language-php">$pattern = '';
-
-$subjects = [
-  'ughughugh' => TRUE, 'ughughughugh' => TRUE,
-  'ughugahugh' => FALSE, "ughughugah" => FALSE,
-  "ughughughugah" => TRUE
-];
-foreach ($subjects as $subject => $shouldMatch) {
-  if ($shouldMatch === (bool)\preg_match($pattern, $subject)) {
-    echo "SUCCESS\n";
-  } else {
-    echo "FAIL\n";
-  }
-}</code></pre>
+            <pre><code data-sample="./tasks/CheckConsecutiveUghs.php#5,12-16,18" class="language-php"></code></pre>
             <aside class="notes">
               <ul>
                 <li><code>$pattern = '((?:ugh){3,})';</code></li>
@@ -571,20 +448,7 @@ foreach ($subjects as $subject => $shouldMatch) {
             <h3>Task: Validate title and name</h3>
             <p>Match strings that start with a title ('Mr.', 'Ms.', 'Mrs.'), followed by a space and a string
               that contains at least one letter.</p>
-            <pre><code class="language-php">$pattern = '()';
-
-$subjects = [
-  'Mr. Doe' => TRUE, 'Mrs. Jane Doe' => TRUE,
-  'Ms. Marple' => TRUE,
-  'Mr. ' => FALSE, "Mrs. 1" => FALSE, "1. Mr. Doe" => FALSE
-];
-foreach ($subjects as $subject => $shouldMatch) {
-  if ($shouldMatch === (bool)\preg_match($pattern, $subject)) {
-    echo "SUCCESS\n";
-  } else {
-    echo "FAIL\n";
-  }
-}</code></pre>
+            <pre><code data-sample="./tasks/ValidateTitleAndName.php#5,12-17,19" class="language-php"></code></pre>
             <aside class="notes">
               <ul>
                 <li><code>$pattern = '(^(Mr|Ms|Mrs)\\. .*\p{L}.*$)u';</code></li>
@@ -630,19 +494,7 @@ $)Dix';</code></pre>
           <section>
             <h3>Task: Validate drunken numbers</h3>
             <p>Validate strings that consist of the any count of same digit (11, 444, ...).</p>
-            <pre><code class="language-php">$pattern = '()';
-
-$subjects = [
-  '7' => TRUE, '11' => TRUE, '444' => TRUE, '8888' => TRUE,
-  '12' => FALSE, "456" => FALSE, "ugh" => FALSE
-];
-foreach ($subjects as $subject => $shouldMatch) {
-  if ($shouldMatch === (bool)\preg_match($pattern, $subject)) {
-    echo "SUCCESS\n";
-  } else {
-    echo "FAIL\n";
-  }
-}</code></pre>
+            <pre><code data-sample="./tasks/ValidateDrunkenNumbers.php#5,11-18,20" class="language-php"></code></pre>
             <aside class="notes">
               <ul>
                 <li><code>$pattern = '(^(\\d)\\1*$)';</code></li>
@@ -665,20 +517,8 @@ foreach ($subjects as $subject => $shouldMatch) {
           <section>
             <h3>Task: Validate IpV4</h3>
             <p>Define a template that matches number between 0 and 255. Use the template to match an IP.</p>
-            <pre><code class="language-php">$pattern = '';
-
-$subjects = [
-  '127.0.0.1' => TRUE, '0.0.0.0' => TRUE,
-  '255.255.255.0' => TRUE, '1.1.1.256' => FALSE,
-  "1.1.1.a" => FALSE, "-1.1.1.1" => FALSE
-];
-foreach ($subjects as $subject => $shouldMatch) {
-  if ($shouldMatch === (bool)\preg_match($pattern, $subject)) {
-    echo "SUCCESS\n";
-  } else {
-    echo "FAIL\n";
-  }
-}</code></pre>
+            <pre style="margin-bottom: 0;"><code data-sample="./tasks/ValidateAnIPV4.php#5,11-17" class="language-php"></code></pre>
+            <pre style="margin-top: 0; box-shadow: none;"><code data-sample="./tasks/ValidateAnIPV4.php#pattern" class="language-php"></code></pre>
           </section>
           <section>
             <h2>Pattern: IpV4</h2>

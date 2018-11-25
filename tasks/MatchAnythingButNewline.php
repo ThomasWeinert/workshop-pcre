@@ -1,6 +1,6 @@
 <?php
 
-class MatchAnythingButNewline extends \PHPUnit\Framework\TestCase {
+class MatchAnythingButNewline extends TaskTestCase {
 
   /**
    * @test

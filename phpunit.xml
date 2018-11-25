@@ -1,4 +1,4 @@
-<phpunit>
+<phpunit bootstrap="task/bootstrap">
   <testsuites>
     <testsuite name="PCRE Workshop">
       <directory suffix=".php">tasks</directory>

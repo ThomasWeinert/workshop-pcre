@@ -1,9 +1,11 @@
 <?php
 
-class ValidateStringStart extends \PHPUnit\Framework\TestCase {
+class ValidateStringStart extends TaskTestCase {
 
   /**
    * @test
+   * @param string $subject
+   * @param bool $shouldMatch
    * @testdox Validate if "$subject" starts with a digit, expecting "$shouldMatch".
    * @testWith
    *   ["1. match", true]
@@ -12,18 +14,10 @@ class ValidateStringStart extends \PHPUnit\Framework\TestCase {
    *   ["no match", false]
    *   ["a 345 b", false]
    *   ["end 3", false]
-   * @param string $subject
-   * @param bool $shouldMatch
    */
   public function ValidateThatTheStringStartsWithADigit($subject, $shouldMatch) {
     $pattern = '()';
 
-    /* DO NOT CHANGE */
-    $result = (bool)\preg_match($pattern, $subject);
-    if ($shouldMatch) {
-      $this->assertTrue($result);
-    } else {
-      $this->assertFalse($result);
-    }
+    $this->testPatternMatch($pattern, $subject, $shouldMatch);
   }
 }

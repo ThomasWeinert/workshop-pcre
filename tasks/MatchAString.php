@@ -1,6 +1,6 @@
 <?php
 
-class MatchAString extends \PHPUnit\Framework\TestCase {
+class MatchAString extends TaskTestCase {
 
   /**
    * @test

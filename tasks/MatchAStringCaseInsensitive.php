@@ -1,6 +1,6 @@
 <?php
 
-class MatchAStringCaseInsensitive extends \PHPUnit\Framework\TestCase {
+class MatchAStringCaseInsensitive extends TaskTestCase {
 
   /**
    * @test

@@ -1,6 +1,6 @@
 <?php
 
-class MatchDigitsAndNonDigits extends \PHPUnit\Framework\TestCase {
+class MatchDigitsAndNonDigits extends TaskTestCase {
 
   /**
    * @test
