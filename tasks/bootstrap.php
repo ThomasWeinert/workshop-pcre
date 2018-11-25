@@ -10,7 +10,7 @@ class TaskTestCase extends TestCase {
    * @param string $subject
    * @param bool $shouldMatch
    */
-  public function testPatternMatch($pattern, $subject, $shouldMatch) {
+  public function testPatternMatch($pattern, $subject, $shouldMatch): void {
     $result = (bool)\preg_match($pattern, $subject);
     if ($shouldMatch) {
       $this->assertTrue($result);
