@@ -19,6 +19,6 @@ class ValidateHexadecimalBytes extends TaskTestCase {
   public function ValidateThatTheStringIsAHexadecimalByte($subject, $shouldMatch): void {
     $pattern = '()D';
 
-    $this->testPatternMatch($pattern, $subject, $shouldMatch);
+    $this->matchPattern($pattern, $subject, $shouldMatch);
   }
 }

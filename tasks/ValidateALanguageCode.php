@@ -20,6 +20,6 @@ class ValidateALanguageCode extends TaskTestCase {
   public function ValidateThatTheStringIsAGermanZipCode($subject, $shouldMatch): void {
     $pattern = '()D';
 
-    $this->testPatternMatch($pattern, $subject, $shouldMatch);
+    $this->matchPattern($pattern, $subject, $shouldMatch);
   }
 }

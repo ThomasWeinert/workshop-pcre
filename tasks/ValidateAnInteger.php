@@ -20,6 +20,6 @@ class ValidateAnInteger extends TaskTestCase {
   public function ValidateThatTheStringIsAnInteger($subject, $shouldMatch): void {
     $pattern = '()D';
 
-    $this->testPatternMatch($pattern, $subject, $shouldMatch);
+    $this->matchPattern($pattern, $subject, $shouldMatch);
   }
 }

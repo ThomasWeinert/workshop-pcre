@@ -16,8 +16,8 @@ class ValidateStringStart extends TaskTestCase {
    *   ["end 3", false]
    */
   public function ValidateThatTheStringStartsWithADigit($subject, $shouldMatch): void {
-    $pattern = '()';
+    $pattern = '(^\\d)';
 
-    $this->testPatternMatch($pattern, $subject, $shouldMatch);
+    $this->matchPattern($pattern, $subject, $shouldMatch);
   }
 }

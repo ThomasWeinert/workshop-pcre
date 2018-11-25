@@ -20,6 +20,6 @@ class ValidateAnIPV4 extends TaskTestCase {
     $pattern = '()';
     // end-sample
 
-    $this->testPatternMatch($pattern, $subject, $shouldMatch);
+    $this->matchPattern($pattern, $subject, $shouldMatch);
   }
 }

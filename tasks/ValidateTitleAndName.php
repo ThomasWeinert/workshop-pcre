@@ -18,6 +18,6 @@ class ValidateTitleAndName extends TaskTestCase {
   public function ValidateThatTheStringIsANameWithATitle($subject, $shouldMatch): void {
     $pattern = '()';
 
-    $this->testPatternMatch($pattern, $subject, $shouldMatch);
+    $this->matchPattern($pattern, $subject, $shouldMatch);
   }
 }

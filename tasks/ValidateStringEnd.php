@@ -19,6 +19,6 @@ class ValidateStringEnd extends TaskTestCase {
   public function ValidateThatTheStringEndsWithADigit($subject, $shouldMatch): void {
     $pattern = '()';
 
-    $this->testPatternMatch($pattern, $subject, $shouldMatch);
+    $this->matchPattern($pattern, $subject, $shouldMatch);
   }
 }
