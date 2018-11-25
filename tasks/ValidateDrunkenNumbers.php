@@ -16,7 +16,7 @@ class ValidateDrunkenNumbers extends TaskTestCase {
    *   ["456", false]
    *   ["ugh", false]
    */
-  public function ValidateThatTheStringContainsAnyCountOfTheSameNumber($subject, $shouldMatch) {
+  public function ValidateThatTheStringContainsAnyCountOfTheSameNumber($subject, $shouldMatch): void {
     $pattern = '()';
 
     $this->testPatternMatch($pattern, $subject, $shouldMatch);

@@ -15,7 +15,7 @@ class ValidateTitleAndName extends TaskTestCase {
    *   ["Mrs. 1", false]
    *   ["1. Mr. Doe", false]
    */
-  public function ValidateThatTheStringIsANameWithATitle($subject, $shouldMatch) {
+  public function ValidateThatTheStringIsANameWithATitle($subject, $shouldMatch): void {
     $pattern = '()';
 
     $this->testPatternMatch($pattern, $subject, $shouldMatch);

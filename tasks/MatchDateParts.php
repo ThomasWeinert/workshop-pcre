@@ -6,7 +6,7 @@ class MatchDateParts extends TaskTestCase {
    * @test
    * @testdox Match a date in the format "YYYY-MM-DD" and capture the parts into named groups (year, month, day).
    */
-  public function MatchAnyUnicodeLetter() {
+  public function MatchAnyUnicodeLetter(): void {
     $pattern = '()';
 
     /* DO NOT CHANGE */

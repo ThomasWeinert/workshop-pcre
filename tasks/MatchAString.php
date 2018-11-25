@@ -6,7 +6,7 @@ class MatchAString extends TaskTestCase {
    * @test
    * @testdox Match the string "nevercodealone".
    */
-  public function MatchTheString() {
+  public function MatchTheString(): void {
     $pattern = '()';
 
     /* DO NOT CHANGE */

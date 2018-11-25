@@ -15,7 +15,7 @@ class ValidateAnIPV4 extends TaskTestCase {
    *   ["1.1.1.a", false]
    *   ["-1.1.1.1", false]
    */
-  public function ValidateThatTheStringStartsWithADigit($subject, $shouldMatch) {
+  public function ValidateThatTheStringStartsWithADigit($subject, $shouldMatch): void {
     // sample(pattern)
     $pattern = '()';
     // end-sample

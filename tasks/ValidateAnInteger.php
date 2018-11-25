@@ -17,7 +17,7 @@ class ValidateAnInteger extends TaskTestCase {
    *   ["abc", false]
    *   ["123 456", false]
    */
-  public function ValidateThatTheStringIsAnInteger($subject, $shouldMatch) {
+  public function ValidateThatTheStringIsAnInteger($subject, $shouldMatch): void {
     $pattern = '()D';
 
     $this->testPatternMatch($pattern, $subject, $shouldMatch);

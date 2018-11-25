@@ -6,7 +6,7 @@ class MatchUnicodeLetters extends TaskTestCase {
    * @test
    * @testdox Match any unicode letter in the string.
    */
-  public function MatchAnyUnicodeLetter() {
+  public function MatchAnyUnicodeLetter(): void {
     $pattern = '()u';
 
     /* DO NOT CHANGE */

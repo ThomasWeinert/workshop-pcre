@@ -6,7 +6,7 @@ class MatchVowels extends TaskTestCase {
    * @test
    * @testdox Match any character that is a vowel (aeiou).
    */
-  public function MatchAllVowelsInTheURL() {
+  public function MatchAllVowelsInTheURL(): void {
     $pattern = '()';
 
     /* DO NOT CHANGE */

@@ -7,7 +7,7 @@ class MatchAnythingButNewline extends TaskTestCase {
    * @testdox Match a string in the pattern "cc.cc.cc.cc"
    *   (four groups of two characters separated by dots).
    */
-  public function MatchFourGroupsOfTwoCharacters() {
+  public function MatchFourGroupsOfTwoCharacters(): void {
     $pattern = '()';
 
     /* DO NOT CHANGE */

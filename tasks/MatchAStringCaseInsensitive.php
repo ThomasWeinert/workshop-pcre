@@ -6,7 +6,7 @@ class MatchAStringCaseInsensitive extends TaskTestCase {
    * @test
    * @testdox Match the string "code" case insensitive.
    */
-  public function MatchCodeCaseInsensitive() {
+  public function MatchCodeCaseInsensitive(): void {
     $pattern = '()';
 
     /* DO NOT CHANGE */

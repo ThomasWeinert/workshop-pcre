@@ -6,7 +6,7 @@ class MatchDigitsAndNonDigits extends TaskTestCase {
    * @test
    * @testdox Match a string like xxXxxXxxxx, x representing a digit, X a non-digit.
    */
-  public function MatchDigitsSeparatedByNonDigits() {
+  public function MatchDigitsSeparatedByNonDigits(): void {
     $pattern = '()';
 
     /* DO NOT CHANGE */

@@ -6,7 +6,7 @@ class MatchCyrillicLetters extends TaskTestCase {
    * @test
    * @testdox Match any Cyrillic letter in the string.
    */
-  public function MatchAnyCyrillicLetter() {
+  public function MatchAnyCyrillicLetter(): void {
     $pattern = '()u';
 
     /* DO NOT CHANGE */

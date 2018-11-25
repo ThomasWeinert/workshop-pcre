@@ -17,7 +17,7 @@ class ValidateALanguageCode extends TaskTestCase {
    *   ["de\n", false]
    *   ["en-US", false]
    */
-  public function ValidateThatTheStringIsAGermanZipCode($subject, $shouldMatch) {
+  public function ValidateThatTheStringIsAGermanZipCode($subject, $shouldMatch): void {
     $pattern = '()D';
 
     $this->testPatternMatch($pattern, $subject, $shouldMatch);

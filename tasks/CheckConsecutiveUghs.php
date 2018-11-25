@@ -14,7 +14,7 @@ class CheckConsecutiveUghs extends TaskTestCase {
    *   ["ughugahugh", false]
    *   ["ughughugah", false]
    */
-  public function CheckForThreeConsecutiveUghs($subject, $shouldMatch) {
+  public function CheckForThreeConsecutiveUghs($subject, $shouldMatch): void {
     $pattern = '()';
 
     $this->testPatternMatch($pattern, $subject, $shouldMatch);
