@@ -6,7 +6,7 @@ class ValidateStringStart extends TaskTestCase {
    * @test
    * @param string $subject
    * @param bool $shouldMatch
-   * @testdox Validate if "$subject" starts with a digit, expecting "$shouldMatch".
+   * @testdox Validate that "$subject" starts with a digit, expecting "$shouldMatch".
    * @testWith
    *   ["1. match", true]
    *   ["2. match", true]
@@ -16,7 +16,7 @@ class ValidateStringStart extends TaskTestCase {
    *   ["end 3", false]
    */
   public function ValidateThatTheStringStartsWithADigit($subject, $shouldMatch): void {
-    $pattern = '(^\\d)';
+    $pattern = '()';
 
     $this->matchPattern($pattern, $subject, $shouldMatch);
   }
