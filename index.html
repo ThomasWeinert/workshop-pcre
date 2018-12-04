@@ -615,7 +615,7 @@ $)Dx';</code></pre>
         },
 
         sampler: {
-          fetcherURL: 'task.php?file=',
+          proxyURL: document.location.href.match(/http:\/\/localhost/) ? 'task.php?file=' : '',
           removeIndentation: true
         }
 

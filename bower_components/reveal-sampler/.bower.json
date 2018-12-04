@@ -19,11 +19,11 @@
     "**/.*",
     "example/"
   ],
-  "_release": "62bfb3b0b7",
+  "_release": "8158adb9bb",
   "_resolution": {
     "type": "branch",
     "branch": "feature/fetcher-url",
-    "commit": "62bfb3b0b7301ba66729fd0318529812439b8a79"
+    "commit": "8158adb9bbdfbd387e358227dfd9c1836cd40819"
   },
   "_source": "https://github.com/ThomasWeinert/reveal-sampler.git",
   "_target": "feature/fetcher-url",
